@@ -2,6 +2,7 @@ import {data} from './CountryData';
 import Header from './Country_header';
 import Main from './Country_main';
 import {useState} from 'react';
+import Popop from './Country_popop';
 
 let newCountry;
 newCountry = data.map(v=> v.name.common).sort();
@@ -24,12 +25,26 @@ newCountry = data.map(v=> v.name.common).sort();
  
 
 
+  const [clas , setclas] = useState('none')
+    const [count , setcount] = useState()
+  
+    const fuonMouOv = (val) => {
+      setclas('show')
+      setcount(val)
+    }
+  
+    const fuonMouLe = () => {
+      setclas('none')
+      setcount('')
+    }
+
+
 
 
     return<div className="App">
     <Header index={counter} fonChan ={fonChan} />
-    <Main Country = {fiCountry}/>
-    
+    <Main count={count} Country = {fiCountry} onMouOv={fuonMouOv} onMouLe={fuonMouLe}/>
+    {count && <Popop clas={clas} count = {count}/>}
     </div>
 }
 

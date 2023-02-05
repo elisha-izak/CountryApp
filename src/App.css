@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 
+ 
 }
 
 .App-logo {
@@ -24,6 +25,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   position: fixed;
+  z-index: 5;
   top: 0;
   width: 100%;
 }
@@ -40,7 +42,9 @@
     transform: rotate(360deg);
   }
 } */
-
+.list{
+ padding-top: 24vh;
+}
 
 .count{
   border: 1px solid rgba(218, 28, 28, 0.4);
@@ -58,6 +62,11 @@
 .none{
   display: none;
 }
+
+
+ .filter{
+  filter: grayscale(1)
+ }
 
 .show{
   background-color: #135df1;

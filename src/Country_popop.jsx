@@ -13,7 +13,7 @@ export default function Popop(props){
     }
 
 
-    return <div className={props.clas}>
+    return <div className= {props.clas}>
         <img src={props.count? props.count.flags.png:props.count} alt="flag" />
         <h3>Population:</h3> 
         <span>{props.count? props.count.population:props.count}</span>
